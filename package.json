@@ -1,0 +1,19 @@
+{
+  "name": "trianafy",
+  "version": "1.0.0",
+  "description": "Proyecto Api Rest",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santisosa404/Trianafy.git"
+  },
+  "author": "Santiago Sosa Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santisosa404/Trianafy/issues"
+  },
+  "homepage": "https://github.com/Santisosa404/Trianafy#readme"
+}
