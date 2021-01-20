@@ -1,55 +1,75 @@
+import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-export class User{
-    constructor(id,username,fullname, email,password) {
-        this.id=id;
-        this.username=username;
-        this.fullname=fullname;
-        this.email=email;
-        this.password=password;
-    }
-    
-    toDto() {
-        return {
-            id: this.id,
-            username: this.username, 
-            fullname: this.fullname,
-            email: this.email
-        }
-    }
-}
 
-const password = bcrypt.hashSync('miClave123', parseInt(process.env.BCRYPT_ROUNDS));
+const { Schema } = mongoose;
 
 
- let users = [
-    new User(1,'ssosa','Santiago Sosa','santi@correo.com',password),
-]
+const UserSchema = new Schema({
+    id: Number,
+    username: String,
+    fullname: String,
+    email: String,
+    password: String
+}, { versionKey: false }
+);
 
+const User = mongoose.model('User', UserSchema);
 
 
 export const userRepository = {
 
-    findByUsername(username) {
-        let user;
-        users.forEach(element => {
-            if (element.username===username){
-                user = element;
-            } 
-        });
-        return user;
-
+    async findAll() {
+        const all = await User.find({}).exec();
+        return all;
     },
-    findById(user_id) {
-      let us;
-      users.forEach(user=>{
-        if(user.id===user_id){
-            us=user;
-        }
-      });
-      return us;
-     },
 
-    create(username,name,email,password){
-        return users.push(new User(8,username,name,email,password));
+    async findByUsername(username) {
+        const user = await User.find({ username: username });
+        return user;
+    },
+    async findById(user_id) {
+        let user = await User.findById(id).exec();
+        return user;
+    },
+    async create(Nuser) {
+        const password = bcrypt.hashSync(Nuser.password, parseInt(process.env.BCRYPT_ROUNDS));
+        const user = new User({
+            username: Nuser.username,
+            email: Nuser.email,
+            fullname: Nuser.fullname,
+            password: password
+        });
+        const save = await user.save();
+        return this.toDto(save);
+    },
+    toDto(user) {
+        return {
+            id: user.id,
+            username: user.username,
+            fullname: user.fullname,
+            email: user.email
+        }
+    }, async updateById(id, modifiedUser) {
+
+        const userSaved = await User.findById(id);
+
+        if (userSaved != null) {
+            return await Object.assign(userSaved, modifiedUser).save();
+        } else
+            return undefined;
+    },
+    update(modifiedUser) {
+        return this.update(modifiedUser.id, modifiedUser);
+    },
+    async delete(id) {
+        await User.findByIdAndRemove(id).exec();
     }
+
 }
+
+const emailExist = async (email) => {
+    let result = await User.countDocuments({ email: email }).exec();
+    return result > 0;
+}
+
+

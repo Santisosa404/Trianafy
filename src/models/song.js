@@ -1,9 +1,13 @@
-export class Song{
-    constructor(id,title,artist,album,year) {
-        this.id=id;
-        this.title=title;
-        this.artist=artist;
-        this.album=album;
-        this.year=year;
-    }
-}
+import mongoose from "mongoose";
+
+const { Schema } = mongoose;
+
+const SongSchema = new Schema({
+    id : Number,
+    title : String,
+    artist : String,
+    album : String,
+    year : String,
+});
+
+const Song = mongoose.model('Song',SongSchema);

@@ -9,17 +9,14 @@ passport.use(new LocalStrategy({
     usernameField: "username",
     passwordField: "password",
     session: false
-}, (username, password, done) => {
-    const user = userRepository.findByUsername(username);
-    console.log(user.password);
-    console.log('¡Pasword debajo');
-    console.log(password);
-    if (user == undefined)
-        return done(null, false);
-    else if (!bcrypt.compareSync(password, user.password))
-        return done(null, false);
+},  async (username, password, done) => {
+    const user = await userRepository.findByUsername(username);
+    if  (user == undefined)
+        return   done(null, false);
+    else if (!bcrypt.compareSync(password, user[0].password))
+       return   done(null, false);
     else
-        return done(null, user.toDto());
+        return   done(null, userRepository.toDto(user[0]));
 }));
 
 const opts = {
@@ -28,23 +25,22 @@ const opts = {
     algorithms: [process.env.JWT_ALGORITHM]
 }
 
-passport.use('token', new JwtStrategy(opts, (jwt_payload, done) => {
+passport.use('token', new JwtStrategy(opts,  (jwt_payload, done) => {
     const id = jwt_payload.sub;
     if (user == undefined)
-        return done(null, false);
+        return  done(null, false);
     else
-        return done(null, user);
+        return  done(null, user);
 }));
 
 export const password = () => (req, res, next) =>
     passport.authenticate('local', { session: false }, (err, user, info) => {
         if (err)
-            return res.status(400).json(err)
+            return res.status(400).json(err);
         else if (err || !user)
-            return res.status(401).end()
-
+            return res.status(401).end();
         req.logIn(user, { session: false }, (err) => {
-            if (err) return res.status(401).end()
+            if (err) return res.status(401).end();
             next()
         })
     })(req, res, next);
@@ -57,10 +53,10 @@ export const token = () => (req, res, next) =>
         req.logIn(user, { session: false }, (err) => {
             if (err) return res.status(401).end()
             next()
-        })
+        });
     })(req, res, next);
 
 
 
-    
+
 export default passport;
