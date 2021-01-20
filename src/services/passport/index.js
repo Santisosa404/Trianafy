@@ -11,6 +11,9 @@ passport.use(new LocalStrategy({
     session: false
 }, (username, password, done) => {
     const user = userRepository.findByUsername(username);
+    console.log(user.password);
+    console.log('¡Pasword debajo');
+    console.log(password);
     if (user == undefined)
         return done(null, false);
     else if (!bcrypt.compareSync(password, user.password))
@@ -27,12 +30,37 @@ const opts = {
 
 passport.use('token', new JwtStrategy(opts, (jwt_payload, done) => {
     const id = jwt_payload.sub;
-
-    const user = userRepository.finndById(user_id);
     if (user == undefined)
-        return done(null, false); // No existe el usuario
+        return done(null, false);
     else
         return done(null, user);
 }));
 
+export const password = () => (req, res, next) =>
+    passport.authenticate('local', { session: false }, (err, user, info) => {
+        if (err)
+            return res.status(400).json(err)
+        else if (err || !user)
+            return res.status(401).end()
+
+        req.logIn(user, { session: false }, (err) => {
+            if (err) return res.status(401).end()
+            next()
+        })
+    })(req, res, next);
+
+export const token = () => (req, res, next) =>
+    passport.authenticate('token', { session: false }, (err, user, info) => {
+        if (err || !user) {
+            return res.status(401).end()
+        }
+        req.logIn(user, { session: false }, (err) => {
+            if (err) return res.status(401).end()
+            next()
+        })
+    })(req, res, next);
+
+
+
+    
 export default passport;

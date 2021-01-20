@@ -19,8 +19,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(passport.initialize());
 
+app.use('/users',routes.userRoutes);
+app.use('/auth',routes.auth);
+
+
 app.listen(process.env.PORT, () => {
     console.log(`Aplicacion en el puerto ${process.env.PORT}`);
 });
 
-app.use('/users',routes.userRoutes)

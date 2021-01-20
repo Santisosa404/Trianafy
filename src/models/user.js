@@ -1,30 +1,55 @@
 import bcrypt from 'bcryptjs';
 export class User{
-    constructor(id,name,fullname, email,password ) {
+    constructor(id,username,fullname, email,password) {
         this.id=id;
-        this.name=name;
+        this.username=username;
         this.fullname=fullname;
         this.email=email;
         this.password=password;
+    }
+    
+    toDto() {
+        return {
+            id: this.id,
+            username: this.username, 
+            fullname: this.fullname,
+            email: this.email
+        }
     }
 }
 
 const password = bcrypt.hashSync('miClave123', parseInt(process.env.BCRYPT_ROUNDS));
 
 
-let users = [
-    new User('ssosa','Santiago Sosa','santi@correo.com',password,1),
+ let users = [
+    new User(1,'ssosa','Santiago Sosa','santi@correo.com',password),
 ]
 
-const usernameExist = (username) => {
-    let usernames = users.map(user => user.username);
-    return usernames.includes(username);
-} 
 
-const userRepository = {
+
+export const userRepository = {
 
     findByUsername(username) {
-       let result = users.filter(user => user.username == username);
-       return Array.isArray(result) && result.length > 0 ? result[0] : undefined;   
+        let user;
+        users.forEach(element => {
+            if (element.username===username){
+                user = element;
+            } 
+        });
+        return user;
+
     },
+    findById(user_id) {
+      let us;
+      users.forEach(user=>{
+        if(user.id===user_id){
+            us=user;
+        }
+      });
+      return us;
+     },
+
+    create(username,name,email,password){
+        return users.push(new User(8,username,name,email,password));
+    }
 }
