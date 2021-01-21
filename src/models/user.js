@@ -49,7 +49,8 @@ export const userRepository = {
             fullname: user.fullname,
             email: user.email
         }
-    }, async updateById(id, modifiedUser) {
+    }, 
+    async updateById(id, modifiedUser) {
 
         const userSaved = await User.findById(id);
 

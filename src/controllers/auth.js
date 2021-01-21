@@ -8,7 +8,7 @@ export const AuthController  = {
     register: (req, res, next) => {
         let us ={
             username : req.body.username,
-            body : req.body.fullname,
+            fullname : req.body.fullname,
             email: req.body.email,
             password : req.body.password
         };
@@ -20,7 +20,6 @@ export const AuthController  = {
     },
 
     login: (req, res, next) => {
-        console.log('realizando login');
         const token = JwtService.sign(req.user);
         res.status(201).json({
             user: req.user,
