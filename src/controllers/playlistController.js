@@ -22,7 +22,6 @@ export const PlayListController = {
             .json(newPlayList);
     },
     getPlayList: async (req, res) => {
-        console.log(req.params.id);
         const playList = await PlayListRepository.findById(req.params.id);
         if (playList != undefined) {
             res.json(playList);
@@ -30,6 +29,21 @@ export const PlayListController = {
             res.sendStatus(404);
 
         }
+    },
+
+    editPlayList: async (req, res) =>{
+        const editPlayList = await PlayListRepository.editById(req.params.id,{
+            name:req.body.name,
+            description: req.body.description,
+            user_id : req.user.id,
+            song : req.body.songs
+        });
+        if(editPlayList!=undefined){
+            res.json(editPlayList);
+        }else{
+            res.sendStatus(404);
+        }
+
     }
 
 }

@@ -34,11 +34,11 @@ export const PlayListRepository={
                 return result;
         },
         async findById(playList_id){
-                console.log('Entro por id');
-                console.log(playList_id);
                 const result = await  PlayList.findById(playList_id).populate('User','_id').populate('Song');
-                console.log('Result');
-                console.log(result);
                 return result != null ? result : undefined;
         },
+        async editById(playList_id, playListMod){
+                const playList = await PlayList.findById(playList_id);
+                return playList!= null ? await Object.assign(playList, playListMod).save() : undefined;
+        }
 }

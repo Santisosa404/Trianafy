@@ -7,7 +7,7 @@ const routes = new Router();
 routes.get('/',token(),PlayListController.allPlayList);
 routes.get('/:id',token(),PlayListController.getPlayList);
 routes.post('/',token(),PlayListController.savePlayList);
-// routes.put('/', );
+routes.put('/:id',token(),PlayListController.editPlayList);
 // routes.delete('/', );
 
 module.exports = routes;
