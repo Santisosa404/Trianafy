@@ -2,21 +2,21 @@ import 'dotenv/config';
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
-import { User, userRepository } from '../../models/user';
+import { userRepository } from '../../models/user';
 import bcrypt from 'bcryptjs';
 
 passport.use(new LocalStrategy({
     usernameField: "username",
     passwordField: "password",
     session: false
-},  async (username, password, done) => {
+}, async (username, password, done) => {
     const user = await userRepository.findByUsername(username);
-    if  (user == undefined)
-        return   done(null, false);
+    if (user == undefined)
+        return done(null, false);
     else if (!bcrypt.compareSync(password, user[0].password))
-       return   done(null, false);
+        return done(null, false);
     else
-        return   done(null, userRepository.toDto(user[0]));
+        return done(null, userRepository.toDto(user[0]));
 }));
 
 const opts = {
@@ -25,12 +25,13 @@ const opts = {
     algorithms: [process.env.JWT_ALGORITHM]
 }
 
-passport.use('token', new JwtStrategy(opts,  (jwt_payload, done) => {
+passport.use('token', new JwtStrategy(opts, async (jwt_payload, done) => {
     const id = jwt_payload.sub;
+    const user = await userRepository.findById(id);
     if (user == undefined)
-        return  done(null, false);
+        return done(null, false);
     else
-        return  done(null, user);
+        return done(null, user);
 }));
 
 export const password = () => (req, res, next) =>
@@ -47,6 +48,7 @@ export const password = () => (req, res, next) =>
 
 export const token = () => (req, res, next) =>
     passport.authenticate('token', { session: false }, (err, user, info) => {
+        console.log(user);
         if (err || !user) {
             return res.status(401).end()
         }

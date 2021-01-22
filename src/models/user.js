@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 
 
 const UserSchema = new Schema({
-    id: Number,
     username: String,
     fullname: String,
     email: String,
@@ -13,7 +12,7 @@ const UserSchema = new Schema({
 }, { versionKey: false }
 );
 
-const User = mongoose.model('User', UserSchema);
+export const User = mongoose.model('User', UserSchema);
 
 
 export const userRepository = {
@@ -28,7 +27,7 @@ export const userRepository = {
         return user;
     },
     async findById(user_id) {
-        let user = await User.findById(id).exec();
+        let user = await User.findById(user_id).exec();
         return user;
     },
     async create(Nuser) {
@@ -68,7 +67,7 @@ export const userRepository = {
 
 }
 
-const emailExist = async (email) => {
+export const emailExist = async (email) => {
     let result = await User.countDocuments({ email: email }).exec();
     return result > 0;
 }

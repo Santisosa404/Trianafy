@@ -23,6 +23,7 @@ app.use(passport.initialize());
 
 app.use('/users', routes.userRoutes);
 app.use('/auth', routes.auth);
+app.use('/lists', routes.playlistRoutes);
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, error => {
     if (error) {
