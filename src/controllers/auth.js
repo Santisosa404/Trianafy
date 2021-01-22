@@ -6,15 +6,20 @@ export const AuthController  = {
 
 
     register: (req, res, next) => {
-        userRepository.create(req.body.username,req.body.fullname,req.body.email,req.body.password) ;
+        let us ={
+            username : req.body.username,
+            fullname : req.body.fullname,
+            email: req.body.email,
+            password : req.body.password
+        };
+        userRepository.create(us) ;
         res.status(201).json({
             username: req.body.username,
-
+            email: req.body.email
         });
     },
 
     login: (req, res, next) => {
-        console.log('realizando login');
         const token = JwtService.sign(req.user);
         res.status(201).json({
             user: req.user,
