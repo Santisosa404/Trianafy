@@ -17,7 +17,6 @@ export const PlayList = mongoose.model('PlayList',PlayListSchema);
 
 export const PlayListRepository={
         async findAll(){
-                console.log('entro find all');
                 return await PlayList
                 .find()
                 .populate('User','_id')

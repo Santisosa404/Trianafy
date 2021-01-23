@@ -10,3 +10,17 @@ const SongSchema = new Schema({
 });
 
 export const Song = mongoose.model('Song',SongSchema);
+
+export const SongController = {
+
+    async createSong(newSong){
+        const Song = new Song({
+            title: newSong.name,
+            artist:newSong.artist,
+            album : newSong.album,
+            year : newSong.year
+        })
+    }
+
+
+}
