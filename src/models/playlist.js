@@ -22,7 +22,7 @@ export const PlayListRepository={
                 .populate('User','_id')
                 .populate('Song')
         },
-        async createPlayList(newPlayList){
+        async savePlayList(newPlayList){
                 const playList = new PlayList({
                         name: newPlayList.name,
                         description: newPlayList.description,
