@@ -42,6 +42,8 @@ export const PlayListRepository = {
                 return playList != null ? await Object.assign(playList, playListMod).save() : undefined;
         },
         async delete(playList_id) {
+                console.log('Hola');
+                
                 if (PlayList.findById(playList_id) != null) {
                         await PlayList.findOneAndRemove(playList_id).exec();
                         return undefined;

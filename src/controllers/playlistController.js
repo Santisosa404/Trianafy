@@ -37,13 +37,16 @@ export const PlayListController = {
             user_id : req.user.id,
             song : req.body.songs
         });
-        if(editPlayList!=undefined){
-            res.json(editPlayList);
+        if(req.body.id !=null){
+            return res.sendStatus(409);
+        }else if(editSong!=undefined){
+            return res.sendStatus(204);
         }else{
-            res.sendStatus(404);
+            return res.sendStatus(404);
         }
     },
     deletePlayList: async (res,req) =>{
+        console.log('jolaaaa');
         const delPlayList = await PlayListRepository.delete(req.params.id);
         return delPlayList!=null? res.sendStatus(204) : res.sendStatus(404);
     }
