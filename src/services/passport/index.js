@@ -48,7 +48,6 @@ export const password = () => (req, res, next) =>
 
 export const token = () => (req, res, next) =>
     passport.authenticate('token', { session: false }, (err, user, info) => {
-        console.log(user);
         if (err || !user) {
             return res.status(401).end()
         }

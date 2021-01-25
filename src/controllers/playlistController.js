@@ -11,18 +11,16 @@ export const PlayListController = {
             res.sendStatus(404)
         }
     },
-    savePlayList: async (req, res) => {
-        const newPlayList = await PlayListRepository.createPlayList({
+    createPlayList: async (req, res) => {
+        const newPlayList = await PlayListRepository.savePlayList({
             name: req.body.name,
             description: req.body.description,
             user_id: req.user.id,
             songs: []
         });
-        res
-            .json(newPlayList);
+        return newPlayList!=undefined? res.sendStatus(201).json(newPlayList) : res.sendStatus(400);
     },
     getPlayList: async (req, res) => {
-        console.log(req.params.id);
         const playList = await PlayListRepository.findById(req.params.id);
         if (playList != undefined) {
             res.json(playList);
@@ -30,6 +28,21 @@ export const PlayListController = {
             res.sendStatus(404);
 
         }
+    },
+
+    editPlayList: async (req, res) =>{
+        const editPlayList = await PlayListRepository.editById(req.params.id,{
+            name:req.body.name,
+            description: req.body.description,
+            user_id : req.user.id,
+            song : req.body.songs
+        });
+        if(editPlayList!=undefined){
+            res.json(editPlayList);
+        }else{
+            res.sendStatus(404);
+        }
+
     }
 
 }

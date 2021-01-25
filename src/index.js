@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use('/users', routes.userRoutes);
 app.use('/auth', routes.auth);
 app.use('/lists', routes.playlistRoutes);
-
+app.use('/songs',routes.songRoutes);
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, error => {
     if (error) {
         console.log(`Error conectando a la base de datos ${JSON.stringify(error)}`);
