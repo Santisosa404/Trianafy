@@ -42,7 +42,10 @@ export const PlayListController = {
         }else{
             res.sendStatus(404);
         }
-
+    },
+    deletePlayList: async (res,req) =>{
+        const delPlayList = await PlayListRepository.delete(req.params.id);
+        return delPlayList!=null? res.sendStatus(204) : res.sendStatus(404);
     }
 
 }
