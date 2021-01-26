@@ -10,4 +10,9 @@ routes.post('/',token(),PlayListController.createPlayList);
 routes.put('/:id',token(),PlayListController.editPlayList);
 // routes.delete('/', );
 
+//Combinadas
+routes.post('/:id1/songs/:id2',token(),PlayListController.addToPlayList);
+routes.get('/:id/songs',token(),PlayListController.getSongs);
+routes.get('/:id1/songs/:id2',token(),PlayListController.songFromPlayList);
+
 module.exports = routes;

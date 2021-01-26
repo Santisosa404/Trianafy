@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
 
-app.use('/users', routes.userRoutes);
 app.use('/auth', routes.auth);
 app.use('/lists', routes.playlistRoutes);
 app.use('/songs',routes.songRoutes);

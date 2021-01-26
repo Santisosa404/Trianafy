@@ -16,11 +16,11 @@ const PlayListSchema =new Schema({
 export const PlayList = mongoose.model('PlayList',PlayListSchema);
 
 export const PlayListRepository={
-        async findAll(){
+        async findAll(user_id){
                 return await PlayList
-                .find()
+                .find({user_id: user_id})
                 .populate('User','_id')
-                .populate('Song')
+                .populate('songs')
         },
         async savePlayList(newPlayList){
                 const playList = new PlayList({
@@ -39,5 +39,11 @@ export const PlayListRepository={
         async editById(playList_id, playListMod){
                 const playList = await PlayList.findById(playList_id);
                 return playList!= null ? await Object.assign(playList, playListMod).save() : undefined;
+        },
+        async findSongs(playList_id){
+                const playList = await PlayList.findOne({_id:playList_id},{songs:1}).populate('songs');
+                const songs=playList.songs;
+                console.log(songs);
+                return Array.isArray(songs) && songs.length>0? songs: undefined;
         }
 }

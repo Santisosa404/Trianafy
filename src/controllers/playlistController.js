@@ -1,12 +1,11 @@
 import { PlayListRepository } from '../models/playlist';
+import {SongRepository} from '../models/song';
 export const PlayListController = {
 
     allPlayList: async (req, res) => {
-        const all = await PlayListRepository.findAll();
+        const all = await PlayListRepository.findAll(req.user.id);
         if (Array.isArray(all) && all.length > 0) {
-            res
-                .json(all)
-                .sendStatus(200);
+            res.json(all)
         } else {
             res.sendStatus(404)
         }
@@ -18,7 +17,7 @@ export const PlayListController = {
             user_id: req.user.id,
             songs: []
         });
-        return newPlayList!=undefined? res.sendStatus(201).json(newPlayList) : res.sendStatus(400);
+        return newPlayList!=undefined? res.json(newPlayList) : res.sendStatus(400);
     },
     getPlayList: async (req, res) => {
         const playList = await PlayListRepository.findById(req.params.id);
@@ -38,11 +37,26 @@ export const PlayListController = {
             song : req.body.songs
         });
         if(editPlayList!=undefined){
-            res.json(editPlayList);
+           return res.json(editPlayList);
         }else{
             res.sendStatus(404);
         }
 
+    },
+    addToPlayList: async (req,res)=>{
+        const playList = await PlayListRepository.findById(req.params.id1);
+        const song = await SongRepository.findById(req.params.id2);
+        playList.songs.push(song);
+        return PlayListRepository.editById(req.params.id1,playList)!=undefined? res.sendStatus(200) : res.sendStatus(404);
+    },
+    getSongs: async (req,res)=>{
+        const songs = await PlayListRepository.findSongs(req.params.id);
+        return songs!=undefined? res.json(songs): res.send('La playlist no contiene canciones')
+    },
+    songFromPlayList: async (req,res) =>{
+        const songs = await PlayListRepository.findSongs(req.params.id1);
+        const result = songs.filter(song => song._id==req.params.id2);
+        return result.length>0 ?res.json(result):res.sendStatus(404);
     }
 
 }
