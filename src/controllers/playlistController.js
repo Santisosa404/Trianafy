@@ -28,6 +28,10 @@ export const PlayListController = {
             res.sendStatus(404);
         }
     },
+    deletePlayList: async (req,res) =>{
+        const delPlayList = await PlayListRepository.deleteById(req.params.id);
+        return delPlayList== undefined? res.sendStatus(204): res.sendStatus(404);
+    },
 
     editPlayList: async (req, res) => {
         const editPlayList = await PlayListRepository.editById(req.params.id, {
@@ -60,14 +64,12 @@ export const PlayListController = {
     },
     deleteFromPlayList: async (req, res) => {
         const playList = await PlayListRepository.findById(req.params.id1);
-        console.log(playList);
         if (playList != undefined) {
             playList.songs.pull(req.params.id2);
             playList.save();
-            res.json(await PlayListRepository.findById(req.params.id1));
+          return  res.json(await PlayListRepository.findById(req.params.id1));
         } else {
-            res.status(400);
+            return res.sendStatus(400);
         }
-    }
-
+    }    
 }

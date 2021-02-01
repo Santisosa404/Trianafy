@@ -8,7 +8,7 @@ routes.get('/',token(),PlayListController.allPlayList);
 routes.get('/:id',token(),PlayListController.getPlayList);
 routes.post('/',token(),PlayListController.createPlayList);
 routes.put('/:id',token(),PlayListController.editPlayList);
-// routes.delete('/', );
+routes.delete('/:id',token(),PlayListController.deletePlayList);
 
 //Combinadas
 routes.post('/:id1/songs/:id2',token(),PlayListController.addToPlayList);
