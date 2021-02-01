@@ -14,5 +14,6 @@ routes.put('/:id',token(),PlayListController.editPlayList);
 routes.post('/:id1/songs/:id2',token(),PlayListController.addToPlayList);
 routes.get('/:id/songs',token(),PlayListController.getSongs);
 routes.get('/:id1/songs/:id2',token(),PlayListController.songFromPlayList);
+routes.delete('/:id1/songs/:id2',token(),PlayListController.deleteFromPlayList);
 
 module.exports = routes;

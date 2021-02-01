@@ -43,7 +43,6 @@ export const PlayListRepository={
         async findSongs(playList_id){
                 const playList = await PlayList.findOne({_id:playList_id},{songs:1}).populate('songs');
                 const songs=playList.songs;
-                console.log(songs);
                 return Array.isArray(songs) && songs.length>0? songs: undefined;
         }
 }
