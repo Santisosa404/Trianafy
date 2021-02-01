@@ -15,7 +15,7 @@ export const SongRepository = {
 
     async saveSong(newSong){
         const song = new Song({
-            title: newSong.title,
+            title: newSong.name,
             artist:newSong.artist,
             album : newSong.album,
             year : newSong.year
@@ -27,7 +27,10 @@ export const SongRepository = {
         return await Song.find();
     },
     async findById(song_id){
+        console.log('fijnd');
+        console.log(song_id);
         const result = await Song.findById(song_id);
+        console.log(result);
         return result!=null?result:undefined;
     },
     async editById(song_id,songMod){
