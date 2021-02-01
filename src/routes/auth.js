@@ -8,7 +8,7 @@ const routes = new Router();
 
 routes.post('/register', [body('id'), body('username'), body('fullname'), body('email').isEmail().custom(email => {
 
-    if (emailExists(email)) {
+    if (emailExist(email)) {
         throw new Error('El email ya está registrado, inicie sesión');
     } else {
         return true;
