@@ -1,0 +1,716 @@
+[
+    {
+        "title": "Intro",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Al filo",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Next level",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Donde está Wifly",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "El doctor",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "El liricista en el tejado",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Esta canción va dedicada",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Que te lo Jumah",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Desafio Total",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Donde van",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Duelo de Vikingos",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Yo contra todos",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Fuera cuantos miran por mi",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Despedida y cierre",
+        "artist": "SFDK",
+        "album": "Odisea en el lodo",
+        "year": 2001
+    },
+    {
+        "title": "Crisis",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Sevilla",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "30",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "No",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "La de los niños",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "El sequito",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Los peliculistas 2",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Nuevo",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Seguimos Fuertes",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "V.S",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Vívelo",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Hablando",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Hip-Hop",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Fruta variada",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Él",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "El Sargento",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "El sequito",
+        "artist": "SFDK",
+        "album": "Siempre Fuertes 2",
+        "year": 2009
+    },
+    {
+        "title": "Intro 07",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "La exaltación del YO",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Pruébalo",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Mi nombre es RAP",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Yo creo",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Hablando de nada",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Diario de Hotel",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Phantom",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "La hora del matarife",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Nauseas",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Suckers MC's",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Intermedio",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "El Umbral",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "Esclavos",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "RIP",
+        "artist": "SFDK",
+        "album": "Los Veteranos",
+        "year": 2007
+    },
+    {
+        "title": "No se para",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Básico",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Simplemente Natural",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "La cosa está mala",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "En la jungle",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Badman de cartón",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Cuanto tiempo",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Principio y final",
+        "artist": "Little Pepe",
+        "album": "La fábrica de lírica",
+        "year": 2016
+    },
+    {
+        "title": "Intro despegando",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Yo puedo",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Exaherao",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Estas muerto",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Lo sabe to cristo",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Ahora no",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "La venda de los ojos",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Reggae",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Interludio cruel corrillo",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Ya vienes",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Cable de cobre",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Mera adicción",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Boom Baff",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "Disparos y fobias",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "La venda de los ojos (Dirty Version)",
+        "artist": "Putolargo & Legendario",
+        "album": "Limonada Planet",
+        "year": 2016
+    },
+    {
+        "title": "La pradoja del enjaulado",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Parte Cuello",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "La maquinaria de las personas",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Conversación con Dios",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Sagrada inspiración",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Negro luto",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Sufrir es vivir",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "^residente",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Luchando en la frontera",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "En la oscuridad",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Llave interna",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Ciudad del vicio",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Copla contemporanea",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "{3`[>(0º)]}",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Niños ciegos",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Cero competencia",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Pelea conmigo",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Arroz blanco y diamantes",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Comprador de almas",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Multiplica",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "Orquesta Coral Reptiliana",
+        "artist": "Foyone",
+        "album": "La jaula de oro",
+        "year": 2015
+    },
+    {
+        "title": "The ringer",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Greatest",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Lucky you",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Paul",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Normal",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Em calls Paul",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Stepping stone",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Not alike",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Kamikaze",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Fall",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Nice guy",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Good guy",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Venom",
+        "artist": "Eminem",
+        "album": "Kamikaze",
+        "year": 2018
+    },
+    {
+        "title": "Is this love",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "No woman no cry",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Could you be loved",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Three little birds",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Buffalo soldier",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Get up stand up",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Stir it up",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Easy skanking",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "One love/People get ready",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "I shot the Sheriff",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Waiting in vain",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Redemption song",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Satisfy my soul",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Exodus",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Jamming",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    },
+    {
+        "title": "Punky reggae party",
+        "artist": "Bob Marley and the Wailers",
+        "album": "Legend",
+        "year": 2002
+    }
+]
