@@ -8,7 +8,7 @@ export const PlayListController = {
                 .json(all)
                 .sendStatus(200);
         } else {
-            res.sendStatus(404)
+            res.sendStatus(404);
         }
     },
     createPlayList: async (req, res) => {
@@ -50,11 +50,9 @@ export const PlayListController = {
         }
     },
     deletePlayList: async (res,req) =>{
-        console.log('jolaaaa');
         const delPlayList = await PlayListRepository.delete(req.params.id);
         return delPlayList!=null? res.sendStatus(204) : res.sendStatus(404);
     },
-
     addToPlayList: async (req, res) => {
         const playList = await PlayListRepository.findById(req.params.id1);
         const song = await SongRepository.findById(req.params.id2);
