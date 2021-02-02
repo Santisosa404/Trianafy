@@ -9,7 +9,7 @@ export const SongController = {
             album:req.body.album,
             year:req.body.year
         });
-        res.json(newSong);
+        return newSong!=undefined? res.json(newSong).sendStatus(201) : res.sendStatus(400);
     },
     allSong: async (req,res) =>{
         const allSongs = await SongRepository.findAll();
