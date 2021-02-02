@@ -1,0 +1,572 @@
+{
+	"info": {
+		"_postman_id": "18335e43-c3d4-41fc-9b46-d83f1c53c5f9",
+		"name": "Trianafy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PlayList",
+			"item": [
+				{
+					"name": "Crear PlayList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE1ODk3NDgsImV4cCI6MTYxMTY3NjE0OH0.R4MYoRYhjaIc8MhqCPVFmXrwAiQgCZRSu_zw4vbFpDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Primera PlayLis22t\",\r\n    \"description\": \"PlayList2 de prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/lists/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTEzMTAxNTYsImV4cCI6MTYxMTM5NjU1Nn0.d2jTggod5GdT2haqPNZWUBENR0c8DB-v1_mp3ujyvx4\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorId PlayList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIwMjY1MTcsImV4cCI6MTYxMjExMjkxN30.qGcTQOu4e0judLFNe4A3iKdsfwHyale5kMTE0VXw4Ko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/lists/600b2af24ef1bf4b006384d0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600b2af24ef1bf4b006384d0"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "600887f8fc40e050109a41d1",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Playlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE1ODk3NDgsImV4cCI6MTYxMTY3NjE0OH0.R4MYoRYhjaIc8MhqCPVFmXrwAiQgCZRSu_zw4vbFpDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/lists/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar lista",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE0MjM1OTYsImV4cCI6MTYxMTUwOTk5Nn0.5iE0uthA73VeBX4Va4dXbYsm0oJTodgdllIddfhWZlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Lista editad2a\",\r\n    \"description\":\"Lista edita en la descriptin3\",\r\n    \"songs\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/lists/600ab93518058a46ac0e827e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600ab93518058a46ac0e827e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar PlayList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE1ODk3NDgsImV4cCI6MTYxMTY3NjE0OH0.R4MYoRYhjaIc8MhqCPVFmXrwAiQgCZRSu_zw4vbFpDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "id",
+								"value": "600b2af24ef1bf4b006384d0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4141/lists/?id=600b2af24ef1bf4b006384d0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "600b2af24ef1bf4b006384d0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autorizacion",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ssosa\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTEzMDk5NjgsImV4cCI6MTYxMTM5NjM2OH0.sm04TcYsPSodwIW0SVGoFPexmsZ59uPShjaYHbhKKmY\"",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Login Trianafy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Song",
+			"item": [
+				{
+					"name": "Crear Cancion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE1ODk3NDgsImV4cCI6MTYxMTY3NjE0OH0.R4MYoRYhjaIc8MhqCPVFmXrwAiQgCZRSu_zw4vbFpDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Bocapeste\",\r\n    \"artist\":\"Foyone\",\r\n    \"album\": \"No pertenece\",\r\n    \"year\":\"2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/songs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"songs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Canciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE2NTUzNDYsImV4cCI6MTYxMTc0MTc0Nn0.eCb_QwJ9w7jVSwGr_e296Y54VnUfCYFOIltxhLzQcVk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/songs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"songs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorId Cancion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE0MjM1OTYsImV4cCI6MTYxMTUwOTk5Nn0.5iE0uthA73VeBX4Va4dXbYsm0oJTodgdllIddfhWZlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/songs/600c6266482c8d312839d4f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"songs",
+								"600c6266482c8d312839d4f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarPorId Cancion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTE0MjM1OTYsImV4cCI6MTYxMTUwOTk5Nn0.5iE0uthA73VeBX4Va4dXbYsm0oJTodgdllIddfhWZlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Bocapeste2\",\r\n    \"artist\":\"Foyone2\",\r\n    \"album\": \"No pertenece2\",\r\n    \"year\":\"20202323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4141/songs/600c6266482c8d312839d4f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"songs",
+								"600c6266482c8d312839d4f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cancion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIxNzM4MDUsImV4cCI6MTYxMjc3ODYwNX0.GWf0m5CzCfuC8pGPOkvvZKHY5idACNT4gqx-jyo5CD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/songs/601598b1c3d98a2e68c87e31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"songs",
+								"601598b1c3d98a2e68c87e31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Combinadas",
+			"item": [
+				{
+					"name": "Agregar a PlayList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIwMjc4ODIsImV4cCI6MTYxMjExNDI4Mn0.i7XSpFSN8to8oo25OSAn0M3TvA6sjpl_AXAOzd5kb84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/lists/600b2af24ef1bf4b006384d0/songs/601598b1c3d98a2e68c87e40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600b2af24ef1bf4b006384d0",
+								"songs",
+								"601598b1c3d98a2e68c87e40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Canciones de PlayList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIwMjc4ODIsImV4cCI6MTYxMjExNDI4Mn0.i7XSpFSN8to8oo25OSAn0M3TvA6sjpl_AXAOzd5kb84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/lists/600b2af24ef1bf4b006384d0/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600b2af24ef1bf4b006384d0",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Canción de PlayList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIwMjc4ODIsImV4cCI6MTYxMjExNDI4Mn0.i7XSpFSN8to8oo25OSAn0M3TvA6sjpl_AXAOzd5kb84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/lists/600b2af24ef1bf4b006384d0/songs/601598b1c3d98a2e68c87e36",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600b2af24ef1bf4b006384d0",
+								"songs",
+								"601598b1c3d98a2e68c87e36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cancion de playList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDA4ODdmOGZjNDBlMDUwMTA5YTQxZDEiLCJpYXQiOjE2MTIxNzM4MDUsImV4cCI6MTYxMjc3ODYwNX0.GWf0m5CzCfuC8pGPOkvvZKHY5idACNT4gqx-jyo5CD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4141/lists/600b2af24ef1bf4b006384d0/songs/600eee508bc3100f38d0551d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4141",
+							"path": [
+								"lists",
+								"600b2af24ef1bf4b006384d0",
+								"songs",
+								"600eee508bc3100f38d0551d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
